@@ -1,0 +1,2 @@
+models:
+    User: { username: string, email: string, first_name: 'string nullable', last_name: 'string nullable', phone: 'string nullable', avatar: 'string nullable', status: 'string default:active', last_login_at: 'datetime nullable', email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }

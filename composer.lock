@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c491b8531eec05ba41a11d9276a5749",
+    "content-hash": "cbe2ca92b4f685a9864253f6371a956b",
     "packages": [
         {
             "name": "brick/math",
@@ -1044,6 +1044,556 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
+        },
+        {
+            "name": "laravel-json-api/core",
+            "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-json-api/core.git",
+                "reference": "7cccc6abaa8907cc8dbca66fd6f378dd237e9191"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-json-api/core/zipball/7cccc6abaa8907cc8dbca66fd6f378dd237e9191",
+                "reference": "7cccc6abaa8907cc8dbca66fd6f378dd237e9191",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^10.0",
+                "illuminate/http": "^10.0",
+                "illuminate/support": "^10.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5.28"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelJsonApi\\Core\\": "src/Core",
+                    "LaravelJsonApi\\Contracts\\": "src/Contracts"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Cloud Creativity Ltd",
+                    "email": "info@cloudcreativity.co.uk"
+                },
+                {
+                    "name": "Christopher Gammie",
+                    "email": "contact@gammie.co.uk"
+                }
+            ],
+            "description": "Contracts and support classes for Laravel JSON:API packages.",
+            "homepage": "https://github.com/laravel-json-api/core",
+            "keywords": [
+                "JSON-API",
+                "jsonapi",
+                "jsonapi.org",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-json-api/core/issues",
+                "source": "https://github.com/laravel-json-api/core/tree/v3.3.0"
+            },
+            "time": "2023-11-08T17:57:40+00:00"
+        },
+        {
+            "name": "laravel-json-api/eloquent",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-json-api/eloquent.git",
+                "reference": "5398cf60925343a58b1267194f7d821bf1b40855"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-json-api/eloquent/zipball/5398cf60925343a58b1267194f7d821bf1b40855",
+                "reference": "5398cf60925343a58b1267194f7d821bf1b40855",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/database": "^10.0",
+                "illuminate/support": "^10.0",
+                "laravel-json-api/core": "^3.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "^9.5.28"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelJsonApi\\Eloquent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Cloud Creativity Ltd",
+                    "email": "info@cloudcreativity.co.uk"
+                },
+                {
+                    "name": "Christopher Gammie",
+                    "email": "contact@gammie.co.uk"
+                }
+            ],
+            "description": "Serialize Eloquent models as JSON:API resources.",
+            "homepage": "https://github.com/laravel-json-api/eloquent",
+            "keywords": [
+                "JSON-API",
+                "jsonapi",
+                "jsonapi.org",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-json-api/eloquent/issues",
+                "source": "https://github.com/laravel-json-api/eloquent/tree/v3.1.0"
+            },
+            "time": "2023-10-29T13:58:22+00:00"
+        },
+        {
+            "name": "laravel-json-api/encoder-neomerx",
+            "version": "v3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-json-api/encoder-neomerx.git",
+                "reference": "30dbfe08be6680408334e6e6dcdeabf0114418bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-json-api/encoder-neomerx/zipball/30dbfe08be6680408334e6e6dcdeabf0114418bf",
+                "reference": "30dbfe08be6680408334e6e6dcdeabf0114418bf",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^10.0",
+                "illuminate/support": "^10.0",
+                "laravel-json-api/core": "^3.0",
+                "laravel-json-api/neomerx-json-api": "^5.0.1",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5.28"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "3.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "LaravelJsonApi\\Encoder\\Neomerx\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelJsonApi\\Encoder\\Neomerx\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Cloud Creativity Ltd",
+                    "email": "info@cloudcreativity.co.uk"
+                },
+                {
+                    "name": "Christopher Gammie",
+                    "email": "contact@gammie.co.uk"
+                }
+            ],
+            "description": "Encode JSON:API resources using the neomerx/json-api package.",
+            "homepage": "https://github.com/laravel-json-api/encoder-neomerx",
+            "keywords": [
+                "JSON-API",
+                "jsonapi",
+                "jsonapi.org",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-json-api/encoder-neomerx/issues",
+                "source": "https://github.com/laravel-json-api/encoder-neomerx/tree/v3.1.1"
+            },
+            "time": "2023-11-20T18:29:23+00:00"
+        },
+        {
+            "name": "laravel-json-api/exceptions",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-json-api/exceptions.git",
+                "reference": "417bc8a73460532982abdb2abe5f7a51bba23483"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-json-api/exceptions/zipball/417bc8a73460532982abdb2abe5f7a51bba23483",
+                "reference": "417bc8a73460532982abdb2abe5f7a51bba23483",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^10.0",
+                "illuminate/pipeline": "^10.0",
+                "laravel-json-api/core": "^3.0",
+                "laravel-json-api/validation": "^3.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel-json-api/testing": "^2.0",
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "^9.5.28"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelJsonApi\\Exceptions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Cloud Creativity Ltd",
+                    "email": "info@cloudcreativity.co.uk"
+                },
+                {
+                    "name": "Christopher Gammie",
+                    "email": "contact@gammie.co.uk"
+                }
+            ],
+            "description": "JSON:API exception parsing for Laravel applications.",
+            "homepage": "https://github.com/laravel-json-api/exceptions",
+            "keywords": [
+                "JSON-API",
+                "jsonapi",
+                "jsonapi.org",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-json-api/exceptions/issues",
+                "source": "https://github.com/laravel-json-api/exceptions/tree/v2.1.0"
+            },
+            "time": "2023-11-08T18:04:39+00:00"
+        },
+        {
+            "name": "laravel-json-api/laravel",
+            "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-json-api/laravel.git",
+                "reference": "3ebee3b4d2c6d03113af9c4f2ef24d3a44bfbf97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-json-api/laravel/zipball/3ebee3b4d2c6d03113af9c4f2ef24d3a44bfbf97",
+                "reference": "3ebee3b4d2c6d03113af9c4f2ef24d3a44bfbf97",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laravel-json-api/core": "^3.3",
+                "laravel-json-api/eloquent": "^3.1",
+                "laravel-json-api/encoder-neomerx": "^3.1",
+                "laravel-json-api/exceptions": "^2.1",
+                "laravel-json-api/spec": "^2.0",
+                "laravel-json-api/validation": "^3.0",
+                "laravel/framework": "^10.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel-json-api/testing": "^2.1",
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "3.x-dev"
+                },
+                "laravel": {
+                    "aliases": {
+                        "JsonApi": "LaravelJsonApi\\Core\\Facades\\JsonApi",
+                        "JsonApiRoute": "LaravelJsonApi\\Laravel\\Facades\\JsonApiRoute"
+                    },
+                    "providers": [
+                        "LaravelJsonApi\\Laravel\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelJsonApi\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Cloud Creativity Ltd",
+                    "email": "info@cloudcreativity.co.uk"
+                },
+                {
+                    "name": "Christopher Gammie",
+                    "email": "contact@gammie.co.uk"
+                }
+            ],
+            "description": "JSON:API for Laravel applications.",
+            "homepage": "https://github.com/laravel-json-api/laravel",
+            "keywords": [
+                "JSON-API",
+                "jsonapi",
+                "jsonapi.org",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-json-api/laravel/issues",
+                "source": "https://github.com/laravel-json-api/laravel/tree/v3.3.0"
+            },
+            "time": "2024-02-14T19:10:53+00:00"
+        },
+        {
+            "name": "laravel-json-api/neomerx-json-api",
+            "version": "v5.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-json-api/neomerx-json-api.git",
+                "reference": "00841feae83ab95f4490c6f2086f02f298293381"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-json-api/neomerx-json-api/zipball/00841feae83ab95f4490c6f2086f02f298293381",
+                "reference": "00841feae83ab95f4490c6f2086f02f298293381",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.17",
+                "mockery/mockery": "^1.4.4",
+                "phpmd/phpmd": "^2.11.1",
+                "phpunit/phpunit": "^9.5.10",
+                "scrutinizer/ocular": "^1.8",
+                "squizlabs/php_codesniffer": "^3.6.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "5.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/I18n/format.php"
+                ],
+                "psr-4": {
+                    "Neomerx\\JsonApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "neomerx",
+                    "email": "info@neomerx.com"
+                },
+                {
+                    "name": "Christopher Gammie",
+                    "email": "contact@gammie.co.uk"
+                }
+            ],
+            "description": "Framework agnostic JSON API (jsonapi.org) implementation",
+            "homepage": "https://github.com/neomerx/json-api",
+            "keywords": [
+                "JSON-API",
+                "api",
+                "json",
+                "jsonapi",
+                "jsonapi.org",
+                "neomerx"
+            ],
+            "support": {
+                "issues": "https://github.com/neomerx/json-api/issues",
+                "source": "https://github.com/laravel-json-api/neomerx-json-api/tree/v5.0.2"
+            },
+            "time": "2023-05-29T14:50:09+00:00"
+        },
+        {
+            "name": "laravel-json-api/spec",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-json-api/spec.git",
+                "reference": "8357dda47642593ffefa07c8fd801cc4cfa1452e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-json-api/spec/zipball/8357dda47642593ffefa07c8fd801cc4cfa1452e",
+                "reference": "8357dda47642593ffefa07c8fd801cc4cfa1452e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^10.0",
+                "illuminate/pipeline": "^10.0",
+                "illuminate/support": "^10.0",
+                "laravel-json-api/core": "^3.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "^9.5.28"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "2.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "LaravelJsonApi\\Spec\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelJsonApi\\Spec\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Cloud Creativity Ltd",
+                    "email": "info@cloudcreativity.co.uk"
+                },
+                {
+                    "name": "Christopher Gammie",
+                    "email": "contact@gammie.co.uk"
+                }
+            ],
+            "description": "Validate JSON documents for compliance with the JSON:API specification.",
+            "homepage": "https://github.com/laravel-json-api/spec",
+            "keywords": [
+                "JSON-API",
+                "jsonapi",
+                "jsonapi.org",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-json-api/spec/issues",
+                "source": "https://github.com/laravel-json-api/spec/tree/v2.0.1"
+            },
+            "time": "2023-10-29T14:14:31+00:00"
+        },
+        {
+            "name": "laravel-json-api/validation",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-json-api/validation.git",
+                "reference": "d28eed0c1658a905abe65cca9e5624aca8139f29"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-json-api/validation/zipball/d28eed0c1658a905abe65cca9e5624aca8139f29",
+                "reference": "d28eed0c1658a905abe65cca9e5624aca8139f29",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^10.0",
+                "illuminate/support": "^10.0",
+                "laravel-json-api/core": "^3.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "^9.5.28"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "3.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "LaravelJsonApi\\Validation\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelJsonApi\\Validation\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Cloud Creativity Ltd",
+                    "email": "info@cloudcreativity.co.uk"
+                },
+                {
+                    "name": "Christopher Gammie",
+                    "email": "contact@gammie.co.uk"
+                }
+            ],
+            "description": "Laravel validation for JSON:API resources.",
+            "homepage": "https://github.com/laravel-json-api/validation",
+            "keywords": [
+                "JSON-API",
+                "jsonapi",
+                "jsonapi.org",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-json-api/validation/issues",
+                "source": "https://github.com/laravel-json-api/validation/tree/v3.0.0"
+            },
+            "time": "2023-02-14T19:18:31+00:00"
         },
         {
             "name": "laravel/framework",
@@ -5687,6 +6237,408 @@
     ],
     "packages-dev": [
         {
+            "name": "cloudcreativity/json-api-testing",
+            "version": "v5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudcreativity/json-api-testing.git",
+                "reference": "31920b5260c909deae5eda5cc7c4a999bcad59f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudcreativity/json-api-testing/zipball/31920b5260c909deae5eda5cc7c4a999bcad59f2",
+                "reference": "31920b5260c909deae5eda5cc7c4a999bcad59f2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^9.0|^10.0",
+                "illuminate/support": "^9.0|^10.0",
+                "php": "^8.1",
+                "phpunit/phpunit": "^9.5.10|^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CloudCreativity\\JsonApi\\Testing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Cloud Creativity Ltd",
+                    "email": "info@cloudcreativity.co.uk"
+                }
+            ],
+            "description": "PHPUnit test helpers to check JSON API documents.",
+            "homepage": "https://github.com/cloudcreativity/json-api",
+            "keywords": [
+                "JSON-API",
+                "api",
+                "cloudcreativity",
+                "json",
+                "jsonapi",
+                "jsonapi.org"
+            ],
+            "support": {
+                "issues": "https://github.com/cloudcreativity/json-api/issues",
+                "source": "https://github.com/cloudcreativity/json-api-testing/tree/v5.0.0"
+            },
+            "time": "2023-02-18T15:01:32+00:00"
+        },
+        {
+            "name": "doctrine/cache",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/cache.git",
+                "reference": "1ca8f21980e770095a31456042471a57bc4c68fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/1ca8f21980e770095a31456042471a57bc4c68fb",
+                "reference": "1ca8f21980e770095a31456042471a57bc4c68fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.1 || ^8.0"
+            },
+            "conflict": {
+                "doctrine/common": ">2.2,<2.4"
+            },
+            "require-dev": {
+                "cache/integration-tests": "dev-master",
+                "doctrine/coding-standard": "^9",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "psr/cache": "^1.0 || ^2.0 || ^3.0",
+                "symfony/cache": "^4.4 || ^5.4 || ^6",
+                "symfony/var-exporter": "^4.4 || ^5.4 || ^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "PHP Doctrine Cache library is a popular cache implementation that supports many different drivers such as redis, memcache, apc, mongodb and others.",
+            "homepage": "https://www.doctrine-project.org/projects/cache.html",
+            "keywords": [
+                "abstraction",
+                "apcu",
+                "cache",
+                "caching",
+                "couchdb",
+                "memcached",
+                "php",
+                "redis",
+                "xcache"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/cache/issues",
+                "source": "https://github.com/doctrine/cache/tree/2.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcache",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-05-20T20:07:39+00:00"
+        },
+        {
+            "name": "doctrine/dbal",
+            "version": "3.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "a19a1d05ca211f41089dffcc387733a6875196cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/a19a1d05ca211f41089dffcc387733a6875196cb",
+                "reference": "a19a1d05ca211f41089dffcc387733a6875196cb",
+                "shasum": ""
+            },
+            "require": {
+                "composer-runtime-api": "^2",
+                "doctrine/cache": "^1.11|^2.0",
+                "doctrine/deprecations": "^0.5.3|^1",
+                "doctrine/event-manager": "^1|^2",
+                "php": "^7.4 || ^8.0",
+                "psr/cache": "^1|^2|^3",
+                "psr/log": "^1|^2|^3"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "12.0.0",
+                "fig/log-test": "^1",
+                "jetbrains/phpstorm-stubs": "2023.1",
+                "phpstan/phpstan": "1.10.57",
+                "phpstan/phpstan-strict-rules": "^1.5",
+                "phpunit/phpunit": "9.6.16",
+                "psalm/plugin-phpunit": "0.18.4",
+                "slevomat/coding-standard": "8.13.1",
+                "squizlabs/php_codesniffer": "3.8.1",
+                "symfony/cache": "^5.4|^6.0|^7.0",
+                "symfony/console": "^4.4|^5.4|^6.0|^7.0",
+                "vimeo/psalm": "4.30.0"
+            },
+            "suggest": {
+                "symfony/console": "For helpful console commands such as SQL execution and import of files."
+            },
+            "bin": [
+                "bin/doctrine-dbal"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\DBAL\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection and management.",
+            "homepage": "https://www.doctrine-project.org/projects/dbal.html",
+            "keywords": [
+                "abstraction",
+                "database",
+                "db2",
+                "dbal",
+                "mariadb",
+                "mssql",
+                "mysql",
+                "oci8",
+                "oracle",
+                "pdo",
+                "pgsql",
+                "postgresql",
+                "queryobject",
+                "sasql",
+                "sql",
+                "sqlite",
+                "sqlserver",
+                "sqlsrv"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/dbal/issues",
+                "source": "https://github.com/doctrine/dbal/tree/3.8.2"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdbal",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-02-12T18:36:36+00:00"
+        },
+        {
+            "name": "doctrine/deprecations",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/deprecations.git",
+                "reference": "dfbaa3c2d2e9a9df1118213f3b8b0c597bb99fab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/dfbaa3c2d2e9a9df1118213f3b8b0c597bb99fab",
+                "reference": "dfbaa3c2d2e9a9df1118213f3b8b0c597bb99fab",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^9",
+                "phpstan/phpstan": "1.4.10 || 1.10.15",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "psalm/plugin-phpunit": "0.18.4",
+                "psr/log": "^1 || ^2 || ^3",
+                "vimeo/psalm": "4.30.0 || 5.12.0"
+            },
+            "suggest": {
+                "psr/log": "Allows logging deprecations via PSR-3 logger implementation"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Deprecations\\": "lib/Doctrine/Deprecations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A small layer on top of trigger_error(E_USER_DEPRECATED) or PSR-3 logging with options to disable all deprecations or selectively for packages.",
+            "homepage": "https://www.doctrine-project.org/",
+            "support": {
+                "issues": "https://github.com/doctrine/deprecations/issues",
+                "source": "https://github.com/doctrine/deprecations/tree/1.1.3"
+            },
+            "time": "2024-01-30T19:34:25+00:00"
+        },
+        {
+            "name": "doctrine/event-manager",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/event-manager.git",
+                "reference": "750671534e0241a7c50ea5b43f67e23eb5c96f32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/750671534e0241a7c50ea5b43f67e23eb5c96f32",
+                "reference": "750671534e0241a7c50ea5b43f67e23eb5c96f32",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "conflict": {
+                "doctrine/common": "<2.9"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^10",
+                "phpstan/phpstan": "^1.8.8",
+                "phpunit/phpunit": "^9.5",
+                "vimeo/psalm": "^4.28"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "The Doctrine Event Manager is a simple PHP event system that was built to be used with the various Doctrine projects.",
+            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
+            "keywords": [
+                "event",
+                "event dispatcher",
+                "event manager",
+                "event system",
+                "events"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/event-manager/issues",
+                "source": "https://github.com/doctrine/event-manager/tree/2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fevent-manager",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-10-12T20:59:15+00:00"
+        },
+        {
             "name": "fakerphp/faker",
             "version": "v1.23.1",
             "source": {
@@ -5870,6 +6822,171 @@
                 "source": "https://github.com/hamcrest/hamcrest-php/tree/v2.0.1"
             },
             "time": "2020-07-09T08:09:16+00:00"
+        },
+        {
+            "name": "laravel-json-api/testing",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-json-api/testing.git",
+                "reference": "0f3412591e539b3e6ece7a611734bf9dfd42be1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-json-api/testing/zipball/0f3412591e539b3e6ece7a611734bf9dfd42be1a",
+                "reference": "0f3412591e539b3e6ece7a611734bf9dfd42be1a",
+                "shasum": ""
+            },
+            "require": {
+                "cloudcreativity/json-api-testing": "^4.1|^5.0",
+                "ext-json": "*",
+                "illuminate/http": "^10.0",
+                "illuminate/support": "^10.0",
+                "illuminate/testing": "^10.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel/framework": "^10.0",
+                "phpunit/phpunit": "^9.5.28|^10.0.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelJsonApi\\Testing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Cloud Creativity Ltd",
+                    "email": "info@cloudcreativity.co.uk"
+                },
+                {
+                    "name": "Christopher Gammie",
+                    "email": "contact@gammie.co.uk"
+                }
+            ],
+            "description": "Test helpers for JSON:API compliant APIs.",
+            "homepage": "https://github.com/laravel-json-api/testing",
+            "keywords": [
+                "JSON-API",
+                "jsonapi",
+                "jsonapi.org",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-json-api/testing/issues",
+                "source": "https://github.com/laravel-json-api/testing/tree/v2.1.0"
+            },
+            "time": "2023-02-18T15:04:12+00:00"
+        },
+        {
+            "name": "laravel-shift/blueprint",
+            "version": "v2.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-shift/blueprint.git",
+                "reference": "bd02171efa47980bca35b4de7ec584955faff64f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-shift/blueprint/zipball/bd02171efa47980bca35b4de7ec584955faff64f",
+                "reference": "bd02171efa47980bca35b4de7ec584955faff64f",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^3.3",
+                "illuminate/console": "^10.0",
+                "illuminate/filesystem": "^10.0",
+                "illuminate/support": "^10.0",
+                "laravel-shift/faker-registry": "^0.3.0",
+                "symfony/yaml": ">=6.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.2",
+                "mockery/mockery": "^1.4.4",
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "^10.0"
+            },
+            "suggest": {
+                "jasonmccreary/laravel-test-assertions": "Required to use additional assertions in generated tests (^1.0)."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Blueprint\\BlueprintServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Blueprint\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "An expressive, human readable code generation tool.",
+            "keywords": [
+                "code generation",
+                "framework",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-shift/blueprint/issues",
+                "source": "https://github.com/laravel-shift/blueprint/tree/v2.9.0"
+            },
+            "time": "2023-12-08T00:24:07+00:00"
+        },
+        {
+            "name": "laravel-shift/faker-registry",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-shift/faker-registry.git",
+                "reference": "968ab023b6c76c2f67cc474ba6d81fce8ff869a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-shift/faker-registry/zipball/968ab023b6c76c2f67cc474ba6d81fce8ff869a9",
+                "reference": "968ab023b6c76c2f67cc474ba6d81fce8ff869a9",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0|^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Shift\\Faker\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jason McCreary",
+                    "email": "jason@pureconcepts.net"
+                }
+            ],
+            "description": "A registry for generating Faker data from a name or data type.",
+            "support": {
+                "issues": "https://github.com/laravel-shift/faker-registry/issues",
+                "source": "https://github.com/laravel-shift/faker-registry/tree/v0.3.0"
+            },
+            "time": "2023-11-24T15:54:02+00:00"
         },
         {
             "name": "laravel/pint",
@@ -6769,6 +7886,55 @@
                 }
             ],
             "time": "2024-02-25T14:05:00+00:00"
+        },
+        {
+            "name": "psr/cache",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/cache/tree/3.0.0"
+            },
+            "time": "2021-02-03T23:26:27+00:00"
         },
         {
             "name": "sebastian/cli-parser",

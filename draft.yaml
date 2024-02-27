@@ -1,0 +1,65 @@
+models:
+ Node:
+    uuid: string unique
+    owner_id: id foreign:users
+    title: string
+    slug: string unique
+    content: text  nullable
+    excerpt: text nullable
+    status: string default:draft
+    type: string default:shop
+    comment_status: string default:open
+    ping_status: string default:closed
+    created_gmt: datetime  nullable
+    modified_gmt: datetime nullable
+    published_at: datetime nullable
+    telephone: string nullable
+    mobile: string nullable
+    email: string nullable
+    address: text nullable
+    city: string nullable
+    state: string nullable
+    country: string nullable
+    zip: string nullable
+    latitude: float
+    longitude: float
+
+
+  NodeMeta:
+    node_id: id foreign:nodes
+    meta_key: string
+    meta_value: string
+
+  Term:
+    name: string
+    slug: string
+    taxonomy: string
+
+  NodeTerm:
+    node_id: integer
+    term_id: integer
+  
+  Document:
+    user_id: id foreign:users
+    name: string
+    path: string
+    mime_type: string
+    size: integer default:0
+
+  UserMeta:
+    user_id: id foreign:users
+    meta_key: string
+    meta_value: string
+
+  Comment:
+    node_id: id foreign:nodes
+    author_id: id foreign:users
+    parent_id: integer nullable
+    comment: string nullable
+    status: string default:pending
+    comment_date: datetime 
+    comment_date_gmt: datetime
+    rating: integer default:0
+
+controllers:
+  # ...
