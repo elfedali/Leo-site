@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->string('uuid')->unique();
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('first_name')->nullable();
@@ -21,7 +22,8 @@ return new class extends Migration
             $table->string('avatar')->nullable();
             $table->string('status')->default(\App\Core\Constants::USER_STATUS_ACTIVE);
             $table->timestamp('last_login_at')->nullable();
-            //$table->string('last_login_ip')->nullable();
+            $table->string('last_login_ip')->nullable();
+            $table->string('role')->default(\App\Core\Constants::USER_ROLE_USER);
 
 
             $table->timestamp('email_verified_at')->nullable();

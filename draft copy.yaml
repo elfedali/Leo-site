@@ -1,0 +1,96 @@
+models:
+  Node:
+    uuid: string unique
+    owner_id: id foreign:users
+    title: string
+    slug: string unique
+    content: text  nullable
+    excerpt: text nullable
+    status: string default:draft
+    type: string default:shop
+    comment_status: string default:open
+    ping_status: string default:closed
+    created_gmt: datetime  nullable
+    modified_gmt: datetime nullable
+    published_at: datetime nullable
+    phone: string nullable
+    mobile: string nullable
+    email: string nullable
+    address: text nullable
+    city: string nullable
+    state: string nullable
+    country: string nullable
+    zip: string nullable
+    latitude: float
+    longitude: float
+    featured_image: string nullable
+    featured_image_alt: string nullable
+    approved: boolean default:false
+    approved_by: id foreign:users nullable
+    approved_date: datetime nullable
+    approved_date_gmt: datetime nullable
+    approved_ip: string nullable
+    approved_user_agent: string nullable
+    verified: boolean default:false
+    verified_by: id foreign:users nullable
+    verified_date: datetime nullable
+    verified_date_gmt: datetime nullable
+    verified_ip: string nullable
+    meta_title: string nullable
+    meta_description: string nullable
+    meta_keywords: string nullable
+    meta_robots: string nullable
+    tiktok: string nullable
+    instagram: string nullable
+    facebook: string nullable
+    twitter: string nullable
+    linkedin: string nullable
+    youtube: string nullable
+    pinterest: string nullable
+    whatsapp: string nullable
+    telegram: string nullable
+
+
+  NodeMeta:
+    node_id: id foreign:nodes
+    meta_key: string
+    meta_value: string
+
+  Term:
+    term_name: string
+    term_slug: string
+    term_taxonomy: string
+
+  NodeTerm:
+    node_id: integer
+    term_id: integer
+  
+  Files:
+    uuid: string unique
+    user_id: id foreign:users
+    file_name: string
+    file_path: string
+    file_mime_type: string
+    file_size: integer default:0
+
+
+
+  UserMeta:
+    user_id: id foreign:users
+    meta_key: string
+    meta_value: string
+
+  Review:
+    uuid: string unique
+    node_id: id foreign:nodes
+    reviewer_id: id foreign:users
+    rating: integer default:0
+    review: text nullable
+    approved: boolean default:false
+    approvedby_id: id foreign:users nullable
+    approved_date: datetime nullable
+    approved_date_gmt: datetime nullable
+    approved_ip: string nullable
+
+controllers:
+  # ...
