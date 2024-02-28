@@ -17,7 +17,7 @@ class Attachment extends Model
      */
     protected $fillable = [
         'uuid',
-        'uploadedby_id',
+        'uploader_id',
         'title',
         'path',
         'mime_type',
@@ -31,11 +31,11 @@ class Attachment extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'uploadedby_id' => 'integer',
+        'uploader_id' => 'integer',
     ];
 
-    public function uploadedby(): BelongsTo
+    public function uploader(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'uploadedby_id');
+        return $this->belongsTo(User::class, 'uploader_id');
     }
 }

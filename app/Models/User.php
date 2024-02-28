@@ -19,17 +19,22 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'uuid',
-        'first_name',
-        'last_name',
         'username',
         'email',
-        'password',
+
+        'first_name',
+        'last_name',
+
         'phone',
-        'status',
-        'role',
         'avatar',
+        'status',
+
         'last_login_at',
         'last_login_ip',
+
+        'role',
+
+        'password',
 
     ];
 
@@ -53,4 +58,24 @@ class User extends Authenticatable
         'password' => 'hashed',
         'last_login_at' => 'datetime',
     ];
+
+    public function nodes()
+    {
+        return $this->hasMany(Node::class, 'owner_id');
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    public function attachments()
+    {
+        return $this->hasMany(Attachment::class, 'uploader_id');
+    }
+
+    public function userMetas()
+    {
+        return $this->hasMany(UserMeta::class);
+    }
 }

@@ -24,10 +24,23 @@ class Node extends Model
         'slug',
         'content',
         'excerpt',
-        'status',
-        'type',
+        'status', // draft, published, pending, etc
+        'type', // shop, restaurant, hotel, etc
         'review_status',
         'phone',
+        'email',
+        'website',
+        'address',
+        'latitude',
+        'longitude',
+        'open_time',
+        'close_time',
+        'price_from',
+        'price_to',
+        'currency',
+        'capacity',
+        'rating',
+        'featured',
     ];
 
     /**

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('attachments', function (Blueprint $table) {
             $table->id();
             $table->string('uuid')->unique();
-            $table->foreignId('uploadedby_id')->constrained('users');
+            $table->foreignId('uploader_id')->constrained('users');
             $table->string('title')->nullable();
             $table->string('path');
             $table->string('mime_type');
