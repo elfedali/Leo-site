@@ -32,7 +32,8 @@ class Server extends BaseServer
     protected function allSchemas(): array
     {
         return [
-            // @TODO
+            \App\JsonApi\V1\Nodes\NodeSchema::class,
+            \App\JsonApi\V1\Users\UserSchema::class,
         ];
     }
 }

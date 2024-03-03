@@ -24,23 +24,47 @@ class Node extends Model
         'slug',
         'content',
         'excerpt',
+
         'status', // draft, published, pending, etc
-        'type', // shop, restaurant, hotel, etc
+        'type', // restaurant, hotel, etc
+
+        'reservation_required',
+        'reservation_note',
+
+        'review_note',
         'review_status',
+
         'phone',
+        'phone_secondary',
+        'phone_tertiary',
+
         'email',
-        'website',
+
         'address',
+
         'latitude',
         'longitude',
+
         'open_time',
         'close_time',
+
         'price_from',
         'price_to',
+
+        'recommended',
+        'featured',
+
         'currency',
         'capacity',
         'rating',
-        'featured',
+
+        'website',
+
+        'facebook',
+        'twitter',
+        'instagram',
+        'youtube',
+        'tiktok',
     ];
 
     /**
@@ -51,6 +75,17 @@ class Node extends Model
     protected $casts = [
         'id' => 'integer',
         'owner_id' => 'integer',
+        'latitude' => 'double',
+        'longitude' => 'double',
+        // 'open_time' => 'time',
+        // 'close_time' => 'time',
+        'price_from' => 'decimal:2',
+        'price_to' => 'decimal:2',
+        'recommended' => 'boolean',
+        'featured' => 'boolean',
+        'capacity' => 'integer',
+        'rating' => 'decimal:1',
+
     ];
 
     public function nodeMetas(): HasMany

@@ -36,17 +36,26 @@ class Constants
         self::NODE_TYPE_HOTEL,
     ];
 
-    public const REVIEW_STATUS_DRAFT = 'draft';
-    public const REVIEW_STATUS_PUBLISHED = 'published';
-    public const REVIEW_STATUSES = [
-        self::REVIEW_STATUS_DRAFT,
-        self::REVIEW_STATUS_PUBLISHED,
+    //node status
+    public const NODE_REVIEW_STATUS_OPEN = 'open';
+    public const NODE_REVIEW_STATUS_CLOSE = 'close';
+    public const NODE_REVIEW_STATUSES = [
+        self::NODE_REVIEW_STATUS_OPEN,
+        self::NODE_REVIEW_STATUS_CLOSE,
     ];
 
+    // review status
+    public const REVIEW_PENDING = 'pending';
     public const REVIEW_APPROVED = 'approved';
     public const REVIEW_NOT_APPROVED = 'not_approved';
+
     public const REVIEW_APPROVAL_STATUSES = [
         self::REVIEW_APPROVED,
         self::REVIEW_NOT_APPROVED,
+        self::REVIEW_PENDING,
     ];
+
+    // require reservation or not
+    public const NODE_RESERVATION_REQUIRED = 'required';
+    public const NODE_RESERVATION_NOT_REQUIRED = 'not_required';
 }

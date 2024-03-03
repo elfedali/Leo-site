@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('last_login_ip')->nullable();
             $table->string('role')->default(\App\Core\Constants::USER_ROLE_USER);
 
-
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
