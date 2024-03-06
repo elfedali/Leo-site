@@ -7,10 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
 
 class Node extends Model
 {
     use HasFactory;
+    use HasSlug;
 
     /**
      * The attributes that are mass assignable.
@@ -112,5 +115,27 @@ class Node extends Model
     public function owner(): BelongsTo
     {
         return $this->belongsTo(User::class, 'owner_id');
+    }
+
+    // slug 
+
+    /**
+     * Get the options for generating the slug.
+     */
+    public function getSlugOptions(): SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('title')
+            ->saveSlugsTo('slug');
+    }
+
+    // on create set the uuid
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($node) {
+            $node->uuid = (string) \Str::uuid();
+        });
     }
 }

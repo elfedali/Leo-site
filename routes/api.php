@@ -21,10 +21,13 @@ use LaravelJsonApi\Laravel\Routing\ResourceRegistrar;
 //     return $request->user();
 // });
 
+Route::post('/auth/login', [\App\Http\Controllers\Api\AuthController::class, 'login']);
+Route::post('/auth/register', [\App\Http\Controllers\Api\AuthController::class, 'register']);
 
+// Use json api routes
 JsonApiRoute::server('v1')
     ->prefix('v1')
     ->resources(function (ResourceRegistrar $server) {
-        $server->resource('nodes', JsonApiController::class);
-        $server->resource('users', JsonApiController::class);
+        $server->resource('nodes', JsonApiController::class)->readOnly();
+        $server->resource('users', JsonApiController::class)->readOnly();
     });

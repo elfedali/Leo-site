@@ -6,6 +6,7 @@ use App\Models\User;
 use LaravelJsonApi\Eloquent\Contracts\Paginator;
 use LaravelJsonApi\Eloquent\Fields\DateTime;
 use LaravelJsonApi\Eloquent\Fields\ID;
+use LaravelJsonApi\Eloquent\Fields\Relations\HasMany;
 use LaravelJsonApi\Eloquent\Fields\Str;
 use LaravelJsonApi\Eloquent\Filters\WhereIdIn;
 use LaravelJsonApi\Eloquent\Pagination\PagePagination;
@@ -20,6 +21,11 @@ class UserSchema extends Schema
      * @var string
      */
     public static string $model = User::class;
+
+    protected ?array $defaultPagination = [
+        'number' => 1,
+        'size' => 10,
+    ];
 
     /**
      * Get the resource fields.
@@ -43,8 +49,12 @@ class UserSchema extends Schema
             Str::make('lastLoginIp'),
             Str::make('emailVerifiedAt'),
 
+            // relationships
+            HasMany::make('nodes')->readOnly(),
+
             DateTime::make('createdAt')->sortable()->readOnly(),
             DateTime::make('updatedAt')->sortable()->readOnly(),
+
         ];
     }
 

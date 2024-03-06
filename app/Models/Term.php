@@ -18,6 +18,7 @@ class Term extends Model
      * @var array
      */
     protected $fillable = [
+
         'name',
         'slug',
         'taxonomy',

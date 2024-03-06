@@ -35,6 +35,8 @@ class User extends Authenticatable
         'role',
 
         'password',
+        'bio',
+
 
     ];
 
@@ -77,5 +79,15 @@ class User extends Authenticatable
     public function userMetas()
     {
         return $this->hasMany(UserMeta::class);
+    }
+
+    // on create set the uuid
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($node) {
+            $node->uuid = (string) \Str::uuid();
+        });
     }
 }

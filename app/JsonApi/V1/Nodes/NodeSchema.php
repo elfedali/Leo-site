@@ -6,7 +6,10 @@ use App\Models\Node;
 use LaravelJsonApi\Eloquent\Contracts\Paginator;
 use LaravelJsonApi\Eloquent\Fields\DateTime;
 use LaravelJsonApi\Eloquent\Fields\ID;
+use LaravelJsonApi\Eloquent\Fields\Relations\BelongsTo;
 use LaravelJsonApi\Eloquent\Fields\Str;
+
+
 use LaravelJsonApi\Eloquent\Filters\WhereIdIn;
 use LaravelJsonApi\Eloquent\Pagination\PagePagination;
 use LaravelJsonApi\Eloquent\Schema;
@@ -21,6 +24,11 @@ class NodeSchema extends Schema
      */
     public static string $model = Node::class;
 
+    protected ?array $defaultPagination = [
+        'number' => 1,
+        'size' => 10,
+    ];
+
     /**
      * Get the resource fields.
      *
@@ -30,6 +38,8 @@ class NodeSchema extends Schema
     {
         return [
             ID::make(),
+            //owner_id
+            Str::make('owner_id'),
             Str::make('uuid'),
             Str::make('title'),
             Str::make('slug'),
@@ -76,6 +86,9 @@ class NodeSchema extends Schema
             Str::make('instagram'),
             Str::make('youtube'),
             Str::make('tiktok'),
+
+            // belongsTo
+            BelongsTo::make('owner')->type('users')->readOnly(),
 
 
             DateTime::make('createdAt')->sortable()->readOnly(),
