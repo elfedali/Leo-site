@@ -1,35 +1,54 @@
 <?php
 
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
-use LaravelJsonApi\Laravel\Facades\JsonApiRoute;
-use LaravelJsonApi\Laravel\Http\Controllers\JsonApiController;
-use LaravelJsonApi\Laravel\Routing\ResourceRegistrar;
 /*
 |--------------------------------------------------------------------------
 | API Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
+| routes are loaded by the RouteServiceProvider within a group which
+| is assigned the "api" middleware group. Enjoy building your API!
 |
 */
 
-// Route::post('/auth/login', [\App\Http\Controllers\Api\AuthController::class, 'login']);
-// Route::post('/auth/logout', [\App\Http\Controllers\Api\AuthController::class, 'logout']);
-// Route::post('/auth/register', [\App\Http\Controllers\Api\AuthController::class, 'register']);
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
 
-// Use json api routes
-JsonApiRoute::server('v1')
-    ->prefix('v1')
-    ->resources(function (ResourceRegistrar $server) {
-        $server->resource('nodes', JsonApiController::class)->readOnly();
-        $server->resource('users', JsonApiController::class)->readOnly();
-    });
+
+Route::get('/posts', function (Request $request) {
+    Log::info('GET /posts');
+    // get the user
+    $user = $request->user();
+    Log::info('user: ' . $user->email);
+    $posts = Post::all();
+    return response()->json($posts);
+})->middleware('auth:sanctum');
+
+// create a post
+Route::post('/posts', function (Request $request) {
+
+    //validate 
+    $request->validate([
+        'title' => 'required',
+        'content' => 'required',
+    ]);
+    Log::info('POST /posts');
+    // get the user
+    $user = $request->user();
+    Log::info('user: ' . $user->email);
+    $post = new Post();
+    $post->title = $request->input('title');
+    $post->content = $request->input('content');
+    $post->save();
+    return response()->json([
+        'message' => __('model.created'),
+        'post' => $post,
+    ]);
+})->middleware('auth:sanctum');
