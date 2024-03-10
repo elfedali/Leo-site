@@ -138,4 +138,10 @@ class Node extends Model
             $node->uuid = (string) \Str::uuid();
         });
     }
+
+    // get created at in human readable format
+    public function getCreatedAtAttribute($value)
+    {
+        return \Carbon\Carbon::parse($value)->diffForHumans();
+    }
 }
