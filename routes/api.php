@@ -114,4 +114,7 @@ JsonApiRoute::server('v1')
     ->resources(function (ResourceRegistrar $server) {
         $server->resource('nodes', JsonApiController::class)->readOnly();
         $server->resource('users', JsonApiController::class)->readOnly();
+        // $server->resource('posts', JsonApiController::class);
+
+        $server->resource('menu-categories', JsonApiController::class);
     });

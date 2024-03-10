@@ -34,6 +34,7 @@ class Server extends BaseServer
         return [
             \App\JsonApi\V1\Nodes\NodeSchema::class,
             \App\JsonApi\V1\Users\UserSchema::class,
+            \App\JsonApi\V1\MenuCategories\MenuCategorySchema::class,
         ];
     }
 }
