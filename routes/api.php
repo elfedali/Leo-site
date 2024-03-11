@@ -116,5 +116,9 @@ JsonApiRoute::server('v1')
         $server->resource('users', JsonApiController::class)->readOnly();
         // $server->resource('posts', JsonApiController::class);
 
-        $server->resource('menu-categories', JsonApiController::class);
+        // $server->resource('menu-categories', JsonApiController::class);
     });
+
+
+Route::apiResource('/restaurants/{node}/menu-category', App\Http\Controllers\MenuCategoryController::class)
+    ->middleware('auth:sanctum');

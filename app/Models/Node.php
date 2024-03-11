@@ -144,4 +144,12 @@ class Node extends Model
     {
         return \Carbon\Carbon::parse($value)->diffForHumans();
     }
+
+    // menuCategories
+    public function menuCategories(): HasMany
+    {
+        return $this->hasMany(MenuCategory::class)
+            ->orderBy('created_at', 'desc')
+            ->with('items');
+    }
 }

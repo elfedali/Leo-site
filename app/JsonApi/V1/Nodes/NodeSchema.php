@@ -6,10 +6,11 @@ use App\Models\Node;
 use LaravelJsonApi\Eloquent\Contracts\Paginator;
 use LaravelJsonApi\Eloquent\Fields\DateTime;
 use LaravelJsonApi\Eloquent\Fields\ID;
+use LaravelJsonApi\Eloquent\Fields\Number;
 use LaravelJsonApi\Eloquent\Fields\Relations\BelongsTo;
+use LaravelJsonApi\Eloquent\Fields\Relations\HasMany;
 use LaravelJsonApi\Eloquent\Fields\Str;
-
-
+use LaravelJsonApi\Eloquent\Filters\Has;
 use LaravelJsonApi\Eloquent\Filters\WhereIdIn;
 use LaravelJsonApi\Eloquent\Pagination\PagePagination;
 use LaravelJsonApi\Eloquent\Schema;
@@ -39,7 +40,7 @@ class NodeSchema extends Schema
         return [
             ID::make(),
             //owner_id
-            Str::make('owner_id'),
+            Number::make('owner_id'),
             Str::make('uuid'),
             Str::make('title'),
             Str::make('slug'),
@@ -89,6 +90,7 @@ class NodeSchema extends Schema
 
             // belongsTo
             BelongsTo::make('owner')->type('users')->readOnly(),
+            HasMany::make('menuCategories')->type('menu-categories')->readOnly(),
 
 
             DateTime::make('createdAt')->sortable()->readOnly(),

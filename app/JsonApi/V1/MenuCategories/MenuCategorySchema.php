@@ -8,6 +8,7 @@ use LaravelJsonApi\Eloquent\Fields\Relations\BelongsTo;
 use LaravelJsonApi\Eloquent\Contracts\Paginator;
 use LaravelJsonApi\Eloquent\Fields\DateTime;
 use LaravelJsonApi\Eloquent\Fields\ID;
+use LaravelJsonApi\Eloquent\Fields\Number;
 use LaravelJsonApi\Eloquent\Fields\Str;
 use LaravelJsonApi\Eloquent\Filters\Where;
 use LaravelJsonApi\Eloquent\Filters\WhereIdIn;
@@ -37,7 +38,8 @@ class MenuCategorySchema extends Schema
             ID::make(),
             Str::make('uuid'),
             Str::make('title'),
-            Str::make('ownerId'),
+            Number::make('owner_id'),
+            Number::make('node_id'),
             // relationships
             BelongsTo::make('owner')->type('users')->readOnly(),
             //BelongsTo node
@@ -58,10 +60,9 @@ class MenuCategorySchema extends Schema
     {
         return [
             WhereIdIn::make($this),
-            // WhereIdIn::make('ownerId'), // this dont work
-
-
-
+            Where::make('title'),
+            Where::make('ownerId'),
+            Where::make('nodeId'),
         ];
     }
 

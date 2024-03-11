@@ -17,9 +17,8 @@ return new class extends Migration
             $table->foreignId('owner_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('position')->default(0);
             $table->string('title');
-            $table->string('description')->nullable();
-            $table->string('image')->nullable();
-            $table->string('status')->default(\App\Core\Constants::NODE_STATUS_DRAFT);
+
+            $table->string('status')->default(\App\Core\Constants::NODE_STATUS_PUBLISHED);
             // belogns to nodes
             $table->foreignId('node_id')->constrained('nodes')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
